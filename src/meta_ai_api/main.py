@@ -195,8 +195,7 @@ class MetaAI:
         """
         if attempts <= MAX_RETRIES:
             logging.warning(
-                f"Was unable to obtain a valid response from Meta AI. Retrying... Attempt {
-                    attempts + 1}/{MAX_RETRIES}."
+                f"Was unable to obtain a valid response from Meta AI. Retrying... Attempt {attempts + 1}/{MAX_RETRIES}."
             )
             time.sleep(3)
             return self.prompt(message, stream=stream, attempts=attempts + 1)
