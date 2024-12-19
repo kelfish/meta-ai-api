@@ -129,8 +129,7 @@ def get_meta_ai_session(fb_session_cookies: FbSessionCookies, proxies=None):
 
     state = extract_value(response.text, start_str='"state":"', end_str='"')
 
-    url = f"https://www.facebook.com/oidc/?app_id=1358015658191005&scope=openid%20linking&response_type=code&redirect_uri=https%3A%2F%2Fwww.meta.ai%2Fauth%2F&no_universal_links=1&deoia=1&state={
-        state}"
+    url = f"https://www.facebook.com/oidc/?app_id=1358015658191005&scope=openid%20linking&response_type=code&redirect_uri=https%3A%2F%2Fwww.meta.ai%2Fauth%2F&no_universal_links=1&deoia=1&state={state}"
     payload = {}
     headers = {
         "authority": "www.facebook.com",
