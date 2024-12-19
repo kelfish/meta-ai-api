@@ -78,8 +78,8 @@ class MetaAI:
         headers = {
             "content-type": "application/x-www-form-urlencoded",
             "cookie": f'_js_datr={self.cookies["_js_datr"]}; '
-            f'abra_csrf={self.cookies["abra_csrf"]}; datr={
-                self.cookies["datr"]};',
+            f'abra_csrf={self.cookies["abra_csrf"]}; '
+            f'datr={self.cookies["datr"]};',
             "sec-fetch-site": "same-origin",
             "x-fb-friendly-name": "useAbraAcceptTOSForTempUserMutation",
         }
