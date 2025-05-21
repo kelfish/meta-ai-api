@@ -66,7 +66,7 @@ class MetaAI:
         payload = {
             "lsd": self.cookies["lsd"],
             "fb_api_caller_class": "RelayModern",
-            "fb_api_req_friendly_name": "useAbraAcceptTOSForTempUserMutation",
+            "fb_api_req_friendly_name": "useKadabraAcceptTOSForTempUserMutation",
             "variables": {
                 "dob": "1999-01-01",
                 "icebreaker_type": "TEXT",
@@ -81,7 +81,7 @@ class MetaAI:
             f'abra_csrf={self.cookies["abra_csrf"]}; '
             f'datr={self.cookies["datr"]};',
             "sec-fetch-site": "same-origin",
-            "x-fb-friendly-name": "useAbraAcceptTOSForTempUserMutation",
+            "x-fb-friendly-name": "useKadabraAcceptTOSForTempUserMutation",
         }
 
         response = self.session.post(url, headers=headers, data=payload)
@@ -141,7 +141,7 @@ class MetaAI:
         payload = {
             **auth_payload,
             "fb_api_caller_class": "RelayModern",
-            "fb_api_req_friendly_name": "useAbraSendMessageMutation",
+            "fb_api_req_friendly_name": "useKadabraSendMessageMutation",
             "variables": json.dumps(
                 {
                     "message": {"sensitive_string_value": message},
@@ -163,7 +163,7 @@ class MetaAI:
         payload = urllib.parse.urlencode(payload)  # noqa
         headers = {
             "content-type": "application/x-www-form-urlencoded",
-            "x-fb-friendly-name": "useAbraSendMessageMutation",
+            "x-fb-friendly-name": "useKadabraSendMessageMutation",
         }
         if self.is_authed:
             headers["cookie"] = f'abra_sess={self.cookies["abra_sess"]}'
